@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee02762d-a5e3-490a-b134-11e01acd748f" name="Changes" comment="" />
+    <list default="true" id="ee02762d-a5e3-490a-b134-11e01acd748f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/AGENTS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/com/example/lab/domain/member/MemberResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/com/example/lab/domain/member/MemberSignupRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/com/example/lab/domain/member/MemberStatus.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/com/example/lab/domain/post/PostCreateRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/com/example/lab/domain/post/PostResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/com/example/lab/domain/post/PostStatus.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLAUDE.md" beforeDir="false" afterPath="$PROJECT_DIR$/CLAUDE.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,12 +30,92 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+        <option value="Kotlin Data Class" />
+        <option value="Kotlin Enum" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ybs1121"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ybs1121/kotlin-spring-transition-lab.git",
+    "accountId": "5e9ed10a-ed03-4083-9043-91b5c5bc48f4"
+  }
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.1860824929161295" />
+      <entry key="MS500" value="2.688398675934198" />
+      <entry key="S2" value="4.04363571285122" />
+      <entry key="S5" value="4.627501070518782" />
+      <entry key="S10" value="5.439587953843549" />
+      <entry key="S30" value="8.143661735211158" />
+      <entry key="S60" value="10.568541815329995" />
+      <entry key="M2" value="17.0210113436219" />
+      <entry key="M5" value="38.5507167974169" />
+      <entry key="M10" value="59.868765352215945" />
+      <entry key="M15" value="70.90621974017546" />
+      <entry key="M30" value="84.96046140332255" />
+      <entry key="H1" value="93.40934822036367" />
+      <entry key="H2" value="98.05159725924702" />
+      <entry key="H4" value="100.48614580904066" />
+      <entry key="D1" value="102.57539512013022" />
+      <entry key="W1" value="102.93920268304011" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="1.6400913026774783E-170" />
+      <entry key="S2" value="3.5786317143525187E-43" />
+      <entry key="S5" value="1.0507195248693073E-17" />
+      <entry key="S10" value="3.2414804100430835E-9" />
+      <entry key="S30" value="0.0014799526463124878" />
+      <entry key="S60" value="0.038481453471367215" />
+      <entry key="M2" value="0.20087851000751072" />
+      <entry key="M5" value="0.6993139391439345" />
+      <entry key="M10" value="1.318695842529697" />
+      <entry key="M15" value="1.6977810362230144" />
+      <entry key="M30" value="2.233492512413022" />
+      <entry key="H1" value="2.5820143169766157" />
+      <entry key="H2" value="2.781453939136757" />
+      <entry key="H4" value="2.88822012665521" />
+      <entry key="D1" value="2.9810112971827993" />
+      <entry key="W1" value="2.997278402075257" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.1525082238989584" />
+      <entry key="MS500" value="2.671810898847645" />
+      <entry key="S2" value="4.037262387261049" />
+      <entry key="S5" value="4.624563168515289" />
+      <entry key="S10" value="5.437850484816013" />
+      <entry key="S30" value="8.143759023316473" />
+      <entry key="S60" value="10.60080642973695" />
+      <entry key="M2" value="17.199427621311642" />
+      <entry key="M5" value="39.20879016044292" />
+      <entry key="M10" value="61.14928025492412" />
+      <entry key="M15" value="72.57221669216989" />
+      <entry key="M30" value="87.17392645684896" />
+      <entry key="H1" value="95.98008099056023" />
+      <entry key="H2" value="100.82705853238149" />
+      <entry key="H4" value="103.37127684729656" />
+      <entry key="D1" value="105.55587825971897" />
+      <entry key="W1" value="105.93640530237029" />
+    </decayedShown>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 2,
@@ -46,10 +137,20 @@
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/bsyang/IdeaProjects/kotlin-spring-transition-lab",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.completion.inline",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
+      <recent name="com.example.lab.domain.post" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="KotlinLabApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="kotlin-spring-transition-lab.kotlin-lab.main" />
@@ -74,7 +175,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1780482556089</updated>
-      <workItem from="1780482557218" duration="221000" />
+      <workItem from="1780482557218" duration="4135000" />
     </task>
     <servers />
   </component>
