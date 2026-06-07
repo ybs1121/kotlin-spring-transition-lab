@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee02762d-a5e3-490a-b134-11e01acd748f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AGENTS.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/com/example/lab/domain/member/MemberResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/com/example/lab/domain/member/MemberSignupRequest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/com/example/lab/domain/member/MemberStatus.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/com/example/lab/domain/post/PostCreateRequest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/com/example/lab/domain/post/PostResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/com/example/lab/domain/post/PostStatus.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="ee02762d-a5e3-490a-b134-11e01acd748f" name="Changes" comment="feat: Day 1 Kotlin DTO 변환 추가">
+      <change afterPath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/com/example/lab/domain/member/Member.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/com/example/lab/domain/member/SignupResult.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CLAUDE.md" beforeDir="false" afterPath="$PROJECT_DIR$/CLAUDE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/week-01-kotlin-core.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/week-01-kotlin-core.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-samples/src/main/java/com/example/sample/member/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-samples/src/main/java/com/example/sample/member/Member.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="27" />
+    <option name="cachedIndexableFilesCount" value="41" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="ExternalProjectsData">
@@ -33,119 +29,121 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Kotlin Data Class" />
         <option value="Kotlin Enum" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ybs1121"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ybs1121&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ybs1121/kotlin-spring-transition-lab.git",
-    "accountId": "5e9ed10a-ed03-4083-9043-91b5c5bc48f4"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ybs1121/kotlin-spring-transition-lab.git&quot;,
+    &quot;accountId&quot;: &quot;5e9ed10a-ed03-4083-9043-91b5c5bc48f4&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.1860824929161295" />
-      <entry key="MS500" value="2.688398675934198" />
-      <entry key="S2" value="4.04363571285122" />
-      <entry key="S5" value="4.627501070518782" />
-      <entry key="S10" value="5.439587953843549" />
-      <entry key="S30" value="8.143661735211158" />
-      <entry key="S60" value="10.568541815329995" />
-      <entry key="M2" value="17.0210113436219" />
-      <entry key="M5" value="38.5507167974169" />
-      <entry key="M10" value="59.868765352215945" />
-      <entry key="M15" value="70.90621974017546" />
-      <entry key="M30" value="84.96046140332255" />
-      <entry key="H1" value="93.40934822036367" />
-      <entry key="H2" value="98.05159725924702" />
-      <entry key="H4" value="100.48614580904066" />
-      <entry key="D1" value="102.57539512013022" />
-      <entry key="W1" value="102.93920268304011" />
+      <entry key="MS100" value="4.223965655492199E-10" />
+      <entry key="MS500" value="0.01818521016583592" />
+      <entry key="S2" value="0.6038107028889231" />
+      <entry key="S5" value="1.2367340973880887" />
+      <entry key="S10" value="1.6060588702449092" />
+      <entry key="S30" value="2.754139267985555" />
+      <entry key="S60" value="4.04649639344305" />
+      <entry key="M2" value="5.598128404048779" />
+      <entry key="M5" value="15.241492482835632" />
+      <entry key="M10" value="35.43327971980779" />
+      <entry key="M15" value="51.52328378970199" />
+      <entry key="M30" value="83.67644532473247" />
+      <entry key="H1" value="122.34532627896898" />
+      <entry key="H2" value="165.23658651604512" />
+      <entry key="H4" value="201.7787809476841" />
+      <entry key="D1" value="246.06867017458856" />
+      <entry key="W1" value="255.38891346474662" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.6400913026774783E-170" />
-      <entry key="S2" value="3.5786317143525187E-43" />
-      <entry key="S5" value="1.0507195248693073E-17" />
-      <entry key="S10" value="3.2414804100430835E-9" />
-      <entry key="S30" value="0.0014799526463124878" />
-      <entry key="S60" value="0.038481453471367215" />
-      <entry key="M2" value="0.20087851000751072" />
-      <entry key="M5" value="0.6993139391439345" />
-      <entry key="M10" value="1.318695842529697" />
-      <entry key="M15" value="1.6977810362230144" />
-      <entry key="M30" value="2.233492512413022" />
-      <entry key="H1" value="2.5820143169766157" />
-      <entry key="H2" value="2.781453939136757" />
-      <entry key="H4" value="2.88822012665521" />
-      <entry key="D1" value="2.9810112971827993" />
-      <entry key="W1" value="2.997278402075257" />
+      <entry key="MS100" value="1.0000005181955636" />
+      <entry key="MS500" value="1.0553221102862216" />
+      <entry key="S2" value="1.4849824654563162" />
+      <entry key="S5" value="1.7560162461844024" />
+      <entry key="S10" value="2.0501267256639055" />
+      <entry key="S30" value="3.933225161487597" />
+      <entry key="S60" value="5.682355961910189" />
+      <entry key="M2" value="7.409919244493317" />
+      <entry key="M5" value="14.360614341324595" />
+      <entry key="M10" value="26.556460689683085" />
+      <entry key="M15" value="34.76294515769873" />
+      <entry key="M30" value="47.31057626735877" />
+      <entry key="H1" value="56.532131047119215" />
+      <entry key="H2" value="62.671210264458416" />
+      <entry key="H4" value="66.4526575945169" />
+      <entry key="D1" value="70.17456820058294" />
+      <entry key="W1" value="70.88018971655706" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.1525082238989584" />
-      <entry key="MS500" value="2.671810898847645" />
-      <entry key="S2" value="4.037262387261049" />
-      <entry key="S5" value="4.624563168515289" />
-      <entry key="S10" value="5.437850484816013" />
-      <entry key="S30" value="8.143759023316473" />
-      <entry key="S60" value="10.60080642973695" />
-      <entry key="M2" value="17.199427621311642" />
-      <entry key="M5" value="39.20879016044292" />
-      <entry key="M10" value="61.14928025492412" />
-      <entry key="M15" value="72.57221669216989" />
-      <entry key="M30" value="87.17392645684896" />
-      <entry key="H1" value="95.98008099056023" />
-      <entry key="H2" value="100.82705853238149" />
-      <entry key="H4" value="103.37127684729656" />
-      <entry key="D1" value="105.55587825971897" />
-      <entry key="W1" value="105.93640530237029" />
+      <entry key="MS100" value="0.025559462149677904" />
+      <entry key="MS500" value="0.5268859225913902" />
+      <entry key="S2" value="1.8360583312241716" />
+      <entry key="S5" value="2.862622724760626" />
+      <entry key="S10" value="3.5735064747877874" />
+      <entry key="S30" value="6.610378962761419" />
+      <entry key="S60" value="9.664201960948585" />
+      <entry key="M2" value="12.961348731778868" />
+      <entry key="M5" value="29.55658947364966" />
+      <entry key="M10" value="61.94220607458299" />
+      <entry key="M15" value="86.24315134418056" />
+      <entry key="M30" value="130.95631432259952" />
+      <entry key="H1" value="178.85758009335532" />
+      <entry key="H2" value="227.89543718549945" />
+      <entry key="H4" value="268.22421473228303" />
+      <entry key="D1" value="316.24182045433616" />
+      <entry key="W1" value="326.2688941363921" />
     </decayedShown>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3Ecf0XBeu3a8P2CBlRcwYceS620" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/bsyang/IdeaProjects/kotlin-spring-transition-lab",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.completion.inline",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/bsyang/IdeaProjects/kotlin-spring-transition-lab&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion.inline&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
       <recent name="com.example.lab.domain.post" />
@@ -163,8 +161,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
       </set>
     </attachedChunks>
   </component>
@@ -175,11 +173,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1780482556089</updated>
-      <workItem from="1780482557218" duration="4135000" />
+      <workItem from="1780482557218" duration="4400000" />
+      <workItem from="1780491037103" duration="1000" />
+      <workItem from="1780719729285" duration="94000" />
+      <workItem from="1780804585732" duration="5562000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: Day 1 Kotlin DTO 변환 추가">
+      <option name="closed" value="true" />
+      <created>1780490991875</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1780490991875</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: Day 1 Kotlin DTO 변환 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Day 1 Kotlin DTO 변환 추가" />
   </component>
 </project>

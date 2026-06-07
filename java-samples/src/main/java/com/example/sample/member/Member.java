@@ -44,6 +44,8 @@ public class Member {
         return new Member(null, email, name, password, MemberStatus.ACTIVE);
     }
 
+
+
     public void changeName(String name) {
         if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("이름은 필수입니다.");
