@@ -4,7 +4,9 @@
 
 ### 배운 점
 
-- 
+- `data class`는 constructor, getter, equals/hashCode/toString을 자동 생성해준다.
+- `val`은 불변(final), `var`는 가변. 기본적으로 `val` 우선 사용.
+- nullable 여부를 타입에 `?`로 명시해서 컴파일 타임에 NPE를 방지할 수 있다.
 
 ### Java와 다른 점
 
@@ -76,15 +78,23 @@
 
 ### 배운 점
 
-- 
-
+- extension function은 class 안에 선언하면 그 class 스코프에 갇힌다. top-level(파일에 바로)로 선언해야 어디서든 `객체.함수()` 형태로 호출 가능.
+- extension function 안에서 receiver 객체가 `this`가 된다. 그래서 해당 클래스의 프로퍼티/메서드를 `this.` 없이 바로 접근 가능.
+- `id!!` — null 절대 아님을 개발자가 보장. null이면 NPE 발생. 저장된 객체처럼 null이 있으면 안 되는 상황에 사용.
 ---
 
 ## Day 5: scope function 적용
 
 ### 배운 점
 
-- 
+- `let`, `also` — receiver 객체를 `it`으로 참조. (`it`은 새로 생성되는 게 아니라 자기 자신을 가리키는 참조)
+- `also` — 부수작업(로깅 등)에 사용. 객체 자신을 반환하므로 체인 중간에 끼워넣기 좋음.
+- `apply` — mutable 객체 초기화 시 사용. 블록 안에서 `this` = receiver라서 `this.` 생략하고 프로퍼티 직접 설정 가능.
+- `let`, `also`는 `it` / `apply`, `run`은 `this` — receiver 접근 방식으로 구분.
+
+### 헷갈렸던 것
+
+- `.also { }` 에서 `{` 를 줄 바꿔서 쓰면 람다로 인식 안 됨. 반드시 `.also {` 같은 줄에 붙여야 함.
 
 ---
 
@@ -92,6 +102,7 @@
 
 ### 잘 됐던 것
 
-### 어색했던 것
+- Java 사고방식에서 벗어나 Kotlin 방식으로 재구성하는 흐름을 잡았다.
+- `val`, nullable, data class, sealed interface, companion object, extension function 순서로 점진적으로 쌓아올림
+- 문법의 차이나 표현의 차이로 어색한 부분이 있어, 익숙해 질 필요가 있어보인다.
 
-### 다음 주 가져갈 것

@@ -28,7 +28,9 @@ class Member private constructor(
             }
             // require(password.length >= 8) { "비밀번호는 8자 이상이어야 합니다." }
 
-            return Member(null, email, name, password, MemberStatus.ACTIVE)
+            return Member(null, email, name, password, MemberStatus.ACTIVE).also {
+                println("Member create : ${it}")
+            }
         }
     }
 
