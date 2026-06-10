@@ -15,6 +15,23 @@ class Member private constructor(
 
     companion object {
         fun signup(email: String, name: String, password: String): Member {
+
+            validate(email, name, password)
+
+            return Member(null, email, name, password, MemberStatus.ACTIVE).also {
+                println("Member create : ${it}")
+            }
+        }
+
+        fun reconstruct(id: Long, email: String, name: String, password: String, status: MemberStatus): Member {
+
+            validate(email, name, password)
+            return Member(id, email, name, password, status).also {
+                println("Member reconstruct : ${it}")
+            }
+        }
+
+        private fun validate(email: String, name: String, password: String) {
             if (email.isBlank()) {
                 throw IllegalArgumentException("이메일은 필수입니다.")
             }
@@ -27,11 +44,9 @@ class Member private constructor(
                 throw IllegalArgumentException("비밀번호는 8자 이상이어야 합니다.")
             }
             // require(password.length >= 8) { "비밀번호는 8자 이상이어야 합니다." }
-
-            return Member(null, email, name, password, MemberStatus.ACTIVE).also {
-                println("Member create : ${it}")
-            }
         }
+
+
     }
 
 

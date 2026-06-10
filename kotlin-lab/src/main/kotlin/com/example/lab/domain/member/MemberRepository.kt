@@ -13,7 +13,7 @@ class MemberRepository(
     fun save(member: Member): Member {
         val id: Long = sequence.getAndIncrement()
 
-        val saved: Member = Member.signup(member.email, member.name, member.password)
+        val saved: Member = Member.reconstruct(id, member.email, member.name, member.password, member.memberStatus)
         store[id] = saved
         return saved
     }
@@ -23,5 +23,9 @@ class MemberRepository(
             it.email == email
         }
         )
+    }
+
+    fun getById(id: Long): Member {
+        return store[id] ?: throw IllegalArgumentException()
     }
 }

@@ -24,4 +24,11 @@ class MemberService(
         return SignupResult.Success
 
     }
+
+    @Transactional(readOnly = true)
+    fun getById(id: Long): MemberResponse {
+        val member = memberRepository.getById(id)
+        // 저장된 id는 null 일 수 없으니까 !!
+        return MemberResponse(member.id!!, member.email, member.name)
+    }
 }
