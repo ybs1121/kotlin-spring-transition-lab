@@ -6,11 +6,33 @@ import org.springframework.transaction.annotation.Transactional
 @Service
 @Transactional(readOnly = true)
 class MemberService(
-    private val memberRepository: MemberRepository
+    private val memberRepository: MemberRepository,
+    private val memberProperties: MemberProperties
 ) {
+
+    lateinit var lastSignupEmail: String
+
+    val configSummary: String by lazy {
+        println("configSummary 계산 중")
+        "default=${memberProperties.defaultStatus}"
+    }
 
     @Transactional
     fun signup(memberSignupRequest: MemberSignupRequest): SignupResult {
+        println("memberProperties : ${memberProperties}")
+
+        try {
+            println("lastSignupEmail (init 전) : ${lastSignupEmail}")
+        } catch (e: UninitializedPropertyAccessException) {
+            println("lateinit 예외 : ${e.message}")
+        }
+
+        lastSignupEmail = memberSignupRequest.email
+        println("lastSignupEmail (init 후) : ${lastSignupEmail}")
+
+        println("configSummary 1차 호출 : ${configSummary}")
+        println("configSummary 2차 호출 : ${configSummary}")
+
         if (memberRepository.existsByEmail(memberSignupRequest.email)) {
             throw IllegalArgumentException("이미 사용 중인 이메일입니다:  ${memberSignupRequest.email}")
         }

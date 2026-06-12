@@ -9,4 +9,6 @@ data class MemberSignupRequest(
     val name: String,
     @field:NotBlank
     val password: String,
+
+    val nickname: String?
 )
